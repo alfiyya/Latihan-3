@@ -3,17 +3,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct mhs {
-    char nama[10];
-    int nim;
-    int kehadiran;
-};
+int main(void)
+{
+ int k;
 
-struct mhs kls[5]= {{"putri",183,100},{"tita",123,80},{"adi",890,70},{"weli",154,96},{"adi",150,98},{"husna",367,87},{"ica",245,25},{"qori",745,90},{"uul",457,80},{"ali",368,75}};
+struct{
+ char nama[20];
+ int nim[10];
+ int kehadiran[20];
+ }dt[5];
 
-int main(){
-    if (kls.kehadiran < 80 ){
-        printf ("%d %s\n",kls.nim,kls.nama,kls.kehadiran);
-    }
-return(0);
-}
+printf("=====Masukan Data Mahasiswa \n\n");
+
+for(k=0;k<5;k++)
+ {
+ printf("No. %i \n",k+1);
+ printf("Nama = "); scanf("%s",&dt[k].nama);
+ printf("Nim = "); scanf("%i",&dt[k].nim);
+ printf("Kehadiran="); scanf("%i",&dt[k].kehadiran);
+ 
+ if ((dt[k].kehadiran)<80){
+    printf("%d. %s//%d//%.0f\n", k+1,dt[k].nama,dt[k].nim,dt[k].kehadiran);}}
+ return(0);
+ }
